@@ -6,6 +6,7 @@
   --footer-background: #2f303a;
   --white-color: #ffffff;
   --button-color: #f5f4fa;
+  --adress-color: rgba(255, 255, 255, 0.6);
 }
 
 .list {
@@ -91,18 +92,29 @@ body {
 }
 
 .strength-list-item {
-  color: var(--sec-black);
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
 }
 
-.general,
-.team {
+.section-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .team {
@@ -116,7 +128,6 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
-  color: var(--sec-black);
 }
 
 .member-position {
@@ -132,33 +143,35 @@ body {
 }
 
 .work-title {
-  cont-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--sec-black);
 }
 
 /* ---------------------button---------------------- */
 
+.button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .hero-button {
   background-color: var(--blue-color);
   color: var(--white-color);
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  cursor: pointer;
 }
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: var(--button-color);
   color: var(--sec-black);
 }
 .portfolio-button {
   background-color: var(--button-color);
   color: var(--sec-black);
-  font-style: inherit;
   width: 128px;
   height: 38px;
   left: 576px;
@@ -168,7 +181,6 @@ body {
   line-height: 1.62px;
   text-align: center;
   letter-spacing: 0.03em;
-  cursor: pointer;
 }
 
 .portfolio-button:hover,
@@ -180,10 +192,7 @@ body {
 /* ------------------------footer----------------------- */
 .footer {
   background-color: var(--footer-background);
-  position: absolute;
-  width: 1600px;
-  height: 252px;
-  color: var(--main-text-color);
+  color: var(--adress-color);
   text-decoration: inherit;
 }
 
@@ -191,15 +200,11 @@ body {
   font-style: inherit;
 }
 
-.logo {
-  color: var(--blue-color);
-}
-
 .logo-footer {
   color: var(--white-color);
 }
 
-.map {
+.footer-link[target='blank'] {
   color: var(--white-color);
 }
 
